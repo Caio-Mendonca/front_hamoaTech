@@ -7,7 +7,6 @@ interface Props {
 const Footer: React.FC<Props> =({medias}) => {
     const server_back = process.env.URL_PHOTO
 
-    console.log('teste medias ->', medias)
     return (
         <BoxFooter>
             <BoxTitleFooter>© 2023 Hamoa Tech - Todos os direitos reservados</BoxTitleFooter>

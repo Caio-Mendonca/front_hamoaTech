@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
-    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&display=swap');
     
     * {
         margin: 0;

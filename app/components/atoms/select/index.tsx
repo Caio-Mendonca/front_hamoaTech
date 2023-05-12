@@ -33,13 +33,13 @@ const customStyles = {
 
     
   }
-const Select =({label}: any) => {
+const Select =() => {
     const options = [
         { value: "brasil", label: "🇧🇷 PT-BR " },
       ];
 
       return (
-        <div className="App">
+        <div >
           <StyledSelect
             styles={customStyles}
             options={options}

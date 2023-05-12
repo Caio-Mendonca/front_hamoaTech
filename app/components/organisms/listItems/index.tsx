@@ -10,17 +10,17 @@ const ListItem: React.FC<Props> =({items}: Props) => {
     function validatedItem(item: any, index:number){
         if(index === 0){
             return (
-                <InitialElement item={item}/>
+                <InitialElement item={item} key={item.id}/>
             )
         }
         if(index % 2 === 0){
             return (
-                <RightPhoneItem item={item}/>
+                <RightPhoneItem item={item} key={item.id}/>
             )
         }
         else{
             return (
-                <LeftPhoneItem item={item} />
+                <LeftPhoneItem item={item} key={item.id}/>
             )
         }
     }

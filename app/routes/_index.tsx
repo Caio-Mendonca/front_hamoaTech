@@ -5,7 +5,7 @@ import Home from "~/components/templates/home";
 import http from "~/config";
 export async function loader({ request }: LoaderArgs) {
   
-  const apiUrl = 'projects?populate=*';
+  const apiUrl = 'projects?sort=id&populate=*';
   const resProjects = await  http.request({
     method: "get",
     url: apiUrl,
@@ -26,11 +26,11 @@ export async function loader({ request }: LoaderArgs) {
     method: "get",
     url: 'medias?populate=*',  
   })
-  const dataProjects = await resProjects.data.data;
-  const dataNavgation = await resNavgation.data.data;
-  const dataCondominiums = await resCondominiums.data.data;
-  const dataStartUps = await resStartUps.data.data;
-  const dataMedias = await resMedias.data.data;
+  const dataProjects = await resProjects.data?.data;
+  const dataNavgation = await resNavgation.data?.data;
+  const dataCondominiums = await resCondominiums.data?.data;
+  const dataStartUps = await resStartUps.data?.data;
+  const dataMedias = await resMedias.data?.data;
   const data ={
     projects: dataProjects,
     navgationItems: dataNavgation,
@@ -46,11 +46,10 @@ export const meta: V2_MetaFunction = () => {
 
 export default function Index() {
   const data = useLoaderData()
-
   return (
     <div>
       <Navgation items={data.navgationItems}/>
-      <Home data={data.projects} condominiums={data.condominiums} startups={data.startups} medias={data.medias}/>
+      <Home data={data?.projects} condominiums={data?.condominiums} startups={data?.startups} medias={data?.medias}/>
     </div>
   );
 }

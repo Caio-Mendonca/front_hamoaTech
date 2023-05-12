@@ -37,6 +37,7 @@ const RightPhoneItem: React.FC<Props> =({item}) => {
                     saiba mais
                 </ButtonStyle>
             </BoxItemStart>
+            
             <BoxItemEnd>
                     <img src={
                         server_back + item.attributes.file.data[0].attributes.url

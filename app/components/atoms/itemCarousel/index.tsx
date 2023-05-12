@@ -9,7 +9,7 @@ const ItemCarousel: React.FC<Props> =({item}) => {
     console.log('item', item)
     return (
         <BoxElement>
-            <div className="box"
+            <div 
             style={{
                 background:`linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${server_back +  item.attributes.image.data[0].attributes.url}) `,
                 backgroundSize: 'cover',

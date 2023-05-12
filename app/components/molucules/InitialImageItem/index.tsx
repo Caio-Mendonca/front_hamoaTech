@@ -12,11 +12,11 @@ const InitialElement: React.FC<Props> =({item}) => {
         <BoxElement>
             <BoxItemStart>
                 <BoxTitle>
-                    {item.attributes.title}
+                    {item?.attributes?.title}
                 </BoxTitle>
                 <BoxSubTitle>
                     <h2>
-                        {item.attributes.descriptionNoColor}
+                        {item?.attributes?.descriptionNoColor}
                         <span
                         style={{
                             color: 'transparent',
@@ -39,9 +39,9 @@ const InitialElement: React.FC<Props> =({item}) => {
             </BoxItemStart>
             <BoxItemEnd>
                     <img src={
-                        server_back + item.attributes.file.data[0].attributes.url
+                        server_back + item?.attributes?.file?.data[0]?.attributes?.url
                     }
-                    alt={item.attributes.title}
+                    alt={item?.attributes?.title}
                     />
             </BoxItemEnd>
         </BoxElement>
